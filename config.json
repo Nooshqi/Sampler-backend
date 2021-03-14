@@ -1,10 +1,9 @@
 ﻿{
     "database": {
-        "host": "localhost",
-        "port": 3306,
-        "user": "root",
-        "password": "12345",
-        "database": "node-mysql-registration-login-api"
+        "host": "us-cdbr-east-03.cleardb.com",
+        "user": "be1c3ed745d3b7",
+        "password": "dc265993",
+        "database": "heroku_b9aa2107f82801d"
     },
     "secret": "fab6e3a3-3317-4372-a9c3-d50907a08643-8d4c1dec-e3d2-4dc6-a7b0-d25f6e171f5a-06d18755-ba5f-4453-b32a-8fb305c1938d"
 }
