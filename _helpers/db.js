@@ -9,7 +9,6 @@ initialize();
 async function initialize() {
     // create db if it doesn't already exist
     const { host, port, user, password, database } = config.database;
-    // const connection = await mysql.createConnection({ host, port, user, password });
     const connection = await mysql.createConnection({ host, user, password });
     await connection.query(`CREATE DATABASE IF NOT EXISTS \`${database}\`;`);
 
@@ -19,11 +18,6 @@ async function initialize() {
     // init models and add them to the exported db object
     db.User = require('../users/user.model')(sequelize);
 
-    // sync all models with database
+    // sync all models with database and force drop table at startup
     await sequelize.sync({force: true});
-
-    //force tables droped and recreated
-
-    // await sequelize.sync({alter: true});
-    // await sequelize.sync({force: true});
 }
